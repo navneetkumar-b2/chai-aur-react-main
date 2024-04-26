@@ -14,3 +14,4 @@ function Layout() {
 }
 
 export default Layout
+//header aur footer hamesha rahega bus "outlet" ki help se beech ka content change hoga 

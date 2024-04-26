@@ -1,6 +1,7 @@
 import React, {useId} from 'react'
-
+//child component
 const Input = React.forwardRef( function Input({
+    //forwardRef ke ander callback function hai ,jo return kr raha hai
     label,
     type = "text",
     className = "",
@@ -27,3 +28,22 @@ const Input = React.forwardRef( function Input({
 })
 
 export default Input
+
+// example
+// import React, { forwardRef } from 'react';
+
+// const InputWithRef = forwardRef((props, ref) => {
+//   return <input type="text" ref={ref} {...props} />;
+// });
+
+// function MyComponent() {
+//   const inputRef = useRef(null); // Create a ref in the parent component
+
+//   return (
+//     <div>
+//       <InputWithRef ref={inputRef} // Pass the ref to the child component
+//       />
+//     </div>
+//   );
+// }
+// https://g.co/gemini/share/62b438fc3937

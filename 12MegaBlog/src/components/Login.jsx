@@ -12,14 +12,14 @@ function Login() {
     const {register, handleSubmit} = useForm()
     const [error, setError] = useState("")
 
-    const login = async(data) => {
+    const login = async(data) => {  //data is an object whose key are set by us in `...register("email") ` and values are taken automatically by `handlesubmit` event which later on calls this login function
         setError("")
         try {
             const session = await authService.login(data)
             if (session) {
                 const userData = await authService.getCurrentUser()
                 if(userData) dispatch(authLogin(userData));
-                navigate("/")
+                navigate("/") //arar login ho jaye to navigate krdo home page pe
             }
         } catch (error) {
             setError(error.message)
@@ -49,11 +49,11 @@ function Login() {
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
         <form onSubmit={handleSubmit(login)} className='mt-8'>
             <div className='space-y-5'>
-                <Input
-                label="Email: "
+                <Input  //component input and below are the props we are sending
+                label="Email:"
                 placeholder="Enter your email"
                 type="email"
-                {...register("email", {
+                {...register("email", {  //email is a key 
                     required: true,
                     validate: {
                         matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
@@ -67,9 +67,9 @@ function Login() {
                 placeholder="Enter your password"
                 {...register("password", {
                     required: true,
-                })}
+                })}  //this js part is send to child as prop & this will handle input value 
                 />
-                <Button
+                <Button  //button is a component
                 type="submit"
                 className="w-full"
                 >Sign in</Button>
@@ -80,4 +80,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login  //fn login 

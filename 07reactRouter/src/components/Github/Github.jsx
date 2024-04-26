@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom'
 
 function Github() {
     const data = useLoaderData()
+    //data kisi variable mai store krna pdega
     // const [data, setData] = useState([])
     // useEffect(() => {
     //  fetch('https://api.github.com/users/hiteshchoudhary')
@@ -24,5 +25,5 @@ export default Github
 
 export const githubInfoLoader = async () => {
     const response = await fetch('https://api.github.com/users/hiteshchoudhary')
-    return response.json()
+    return response.json() //returns promise
 }

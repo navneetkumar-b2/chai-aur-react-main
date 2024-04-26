@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useTodo } from '../contexts/TodoContext';
 
-function TodoItem({ todo }) {
+function TodoItem({ todo }) {  
   const [isTodoEditable, setIsTodoEditable] = useState(false)
   const [todoMsg, setTodoMsg] = useState(todo.todo)
   const {updateTodo, deleteTodo, toggleComplete} = useTodo()
@@ -53,7 +53,7 @@ function TodoItem({ todo }) {
           {/* Delete Todo Button */}
           <button
               className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
-              onClick={() => deleteTodo(todo.id)}
+              onClick={() => deleteTodo(todo.id)} //every button gets its id when component is mounted and when clicked that id is passed to delete function
           >
               ❌
           </button>

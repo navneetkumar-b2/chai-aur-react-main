@@ -1,15 +1,13 @@
 import {createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = {
-    todos: [{id: 1, text: "Hello world"}]
+    todos: [{id: 1, text: "hello world"}]  //agar hum local storage ke sath isko bnaye to use effect kr k phle text lena but it is not a jsx we cant use that 
 }
-
-
 
 export const todoSlice = createSlice({
     name: 'todo',
-    initialState,
-    reducers: {
+    initialState, //initial variables
+    reducers: {  //reducers are key functions
         addTodo: (state, action) => {
             const todo = {
                 id: nanoid(), 

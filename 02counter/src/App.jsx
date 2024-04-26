@@ -1,33 +1,28 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-
-  const [counter, setCounter]  = useState(15)
-
-  //let counter = 15
-
+  let [counter, setCounter]  = useState(15)
+  // let counter = 15
   const addValue = () => {
-    //counter = counter + 1
-    
-    // setCounter(counter + 1 )
-    // setCounter(counter + 1 )
-    // setCounter(counter + 1 )
-    // setCounter(counter + 1 )
+    // counter = counter + 1 
+    setCounter(counter + 1 )
+    setCounter(counter + 1 )
+    setCounter(counter + 1 )
+    setCounter(counter + 1 )
 
-    // as `setCounter(counter + 1 )` is written 4 times but counter will be updated only once due to the react fibre we studied which executes in chunks
-    // but the below(setCounter(prevCounter => prevCounter + 1 )) will increase counter by 4 because in first resolves the callback function written inside the setCounter then moves to the next code 
-    // `prevCounter` last updated state lega
+    // as `setCounter(counter + 1 )` is written 4 times but counter will be updated only once due to the react fibre we studied which executes in chunks.
+    // but the below(setCounter(prevCounter => prevCounter + 1 )) will increase counter by 4 because in first resolves the xallback function written inside the setCounter then moves to the next code
+    // `prevCounter` last updated state lega 
     // setCounter(() => {} )
-    setCounter((v) => {return v*v*v} )
-    setCounter((prevCounter) => {return prevCounter + 1} )  //all working the same 
-    setCounter((prevCounter) => {return prevCounter + 1} )  //all working the same
-    setCounter((count) => {return count + 1} )  //all working the same
-    setCounter(prevCounter => prevCounter + 1 )             //all working the same
-    setCounter(prevCounter => prevCounter + 1)              //all working the same
-    setCounter(count => count + 1)              //all working the same
+    // setCounter((v) => {return v*v*v} )
+    // setCounter((prevCounter) => {return prevCounter + 1} )  //all working the same 
+    // setCounter((prevCounter) => {return prevCounter + 1} )  //all working the same
+    // setCounter((count) => {return count + 1} )  //all working the same
+    // setCounter(prevCounter => prevCounter + 1 )             //all working the same
+    // setCounter(prevCounter => prevCounter + 1)              //all working the same
+    // setCounter(count => count + 1)              //all working the same
     
   }
 

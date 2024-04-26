@@ -3,7 +3,7 @@ import {Editor } from '@tinymce/tinymce-react';
 import {Controller } from 'react-hook-form';
 
 
-export default function RTE({name, control, label, defaultValue =""}) {
+export default function RTE({name, control, label, defaultValue =""}) { //jo RTE call krega wo ye props ko dega
   return (
     <div className='w-full'> 
     {label && <label className='inline-block mb-1 pl-1'>{label}</label>}
@@ -11,7 +11,8 @@ export default function RTE({name, control, label, defaultValue =""}) {
     <Controller
     name={name || "content"}
     control={control}
-    render={({field: {onChange}}) => (
+    render={({field: {onChange}}) => ( //render ke ander callback hai jiske argument mai object ka key value pair hai, render ke ander pura js likh rakha hai
+    
         <Editor
         initialValue={defaultValue}
         init={{

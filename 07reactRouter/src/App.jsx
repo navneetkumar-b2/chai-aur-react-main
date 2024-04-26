@@ -18,3 +18,4 @@ function App() {
 }
 
 export default App
+//ismai "app.jsk" ka use hi nhi hai

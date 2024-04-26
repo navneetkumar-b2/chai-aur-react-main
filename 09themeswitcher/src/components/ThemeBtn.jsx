@@ -26,3 +26,6 @@ export default function ThemeBtn() {
         </label>
     );
 }
+
+// const {themeMode, lightTheme, darkTheme} = useTheme() - try understanding it as 
+// const {themeMode, lightTheme, darkTheme} = useContext(ThemeContext) "useContext(ThemeContext)" this is returned by useTheme();

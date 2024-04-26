@@ -10,7 +10,8 @@ export default function Button({
 }) {
     return (
         <button className={`px-4 py-2 rounded-lg ${bgColor} ${textColor} ${className}`} {...props}>
-            {children}
+            {children} 
         </button>
     );
 }
+//The children prop is a special prop in React components that allows you to pass content between the opening and closing tags of a component.

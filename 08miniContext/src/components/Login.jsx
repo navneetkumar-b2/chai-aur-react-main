@@ -4,13 +4,12 @@ import UserContext from '../context/UserContext'
 function Login() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-
-    const {setUser} = useContext(UserContext)
-
+    const {setUser} = useContext(UserContext) 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setUser({username, password})
+        setUser({username, password})  //user set kr diya as a object
     }
+    
   return (
     <div>
         <h2>Login</h2>
@@ -27,5 +26,4 @@ function Login() {
     </div>
   )
 }
-
 export default Login
